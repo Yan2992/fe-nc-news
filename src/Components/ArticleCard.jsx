@@ -1,3 +1,4 @@
+
 export default function ArticleCard({ article }) {
   return (
     <article>

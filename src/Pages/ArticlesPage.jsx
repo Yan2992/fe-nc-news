@@ -1,6 +1,9 @@
 import { useEffect, useState } from "react"
-import ArticleCard from "../Components/ArticleCard"
-import { getAllArticles } from "../utils/api" 
+import { getAllArticles } from "../utils/api"
+import { Link } from "react-router-dom"
+import './Articles.css'
+
+
 
 export default function ArticlesPage() {
   const [articles, setArticles] = useState([])
@@ -8,28 +11,30 @@ export default function ArticlesPage() {
 
   useEffect(() => {
     getAllArticles()
-      .then((articlesData) => {
-        setArticles(articlesData)
-        setIsLoading(false);
+      .then((data) => {
+        setArticles(data)
+        setIsLoading(false)
       })
       .catch((err) => {
-        console.error(err)
-        setIsLoading(false)
+        console.error(err);
+        setIsLoading(false);
       })
   }, [])
 
   if (isLoading) return <p>Loading articles...</p>
+  if (!articles.length) return <p>No articles found</p>
 
   return (
-    <section>
-      <h2>All Articles</h2>
-      <ul>
-        {articles.map((article) => (
-          <li key={article.article_id}>
-            <ArticleCard article={article} />
-          </li>
-        ))}
-      </ul>
+    <section className="articles-container">
+      {articles.map((article) => (
+        <article key={article.article_id} className="article-card">
+          <Link to={`/articles/${article.article_id}`}>
+            <h3>{article.title}</h3>
+          </Link>
+          <p><strong>By:</strong> {article.author}</p>
+          <p><strong>Votes:</strong> {article.votes}</p>
+        </article>
+      ))}
     </section>
   )
 }

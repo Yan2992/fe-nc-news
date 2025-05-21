@@ -5,5 +5,13 @@ const newsApi = axios.create({
 })
 
 export const getAllArticles = () => {
-  return newsApi.get("/articles").then((res) => res.data.articles)
+  return newsApi.get("/articles")
+  .then((res) => res.data.articles)
+}
+
+export const getSingleArticle = (article_id) => {
+  return newsApi.get(`/articles/${article_id}`)
+  .then(({ data }) => {
+    return data.article
+  })
 }

@@ -16,3 +16,12 @@
     font-size: 1.3rem;
     margin-bottom: 0.5rem;
 }
+
+.articles-container a h3 {
+  color: white; 
+  transition: color 0.3s ease;
+}
+
+.articles-container a:hover h3 {
+  color: red; 
+}
