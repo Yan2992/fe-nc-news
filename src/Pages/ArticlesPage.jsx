@@ -35,6 +35,8 @@ export default function ArticlesPage() {
           <p><strong>Votes:</strong> {article.votes}</p>
         </article>
       ))}
+      <Link to="/home" className="back-link">Back to Home</Link>
     </section>
+    
   )
 }
