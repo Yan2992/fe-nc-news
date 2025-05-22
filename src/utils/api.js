@@ -28,8 +28,10 @@ export const getArticleComments = (article_id) => {
 }
 
 export const updateArticleVotes = (article_id, voteChange) => {
-  return localApi.patch(`/articles/${article_id}`, {
-    inc_votes: voteChange,
-  }).then((res) => res.data.article)
+  return localApi.patch(`/articles/${article_id}`, {inc_votes: voteChange})
+    .then((res) => res.data.article)
 }
 
+export const postNewComment = (article_id, { author, body }) => {
+  return newsApi.post(`/articles/${article_id}/comments`, {username: author, body,}).then((res) => res.data.comment)
+}
