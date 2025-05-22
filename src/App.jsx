@@ -16,16 +16,4 @@ function App() {
   )
 }
 
-export default App;
-
-
-
-
-
-
-
-
-// optimistically render voting when it comes to working on voting 
-// the vote should update by one. not by 2 not by 50, just by one. Use optimistic rendering. The response to the api is sent, but we're not waiting for a response back. Do not initialise state with a prop. Vte value should start at 0. 
-
-// Posting a comment is a pain: If you optimistically render a comment (just don't). 
+export default App
