@@ -1,25 +1,26 @@
 import { useEffect, useState } from "react"
 import { getAllArticles } from "../utils/api"
-import { Link } from "react-router-dom"
+import { Link, useLocation } from "react-router-dom"
 import './Articles.css'
-
-
 
 export default function ArticlesPage() {
   const [articles, setArticles] = useState([])
   const [isLoading, setIsLoading] = useState(true)
+  const [error, setError] = useState(null)
+  const location = useLocation()
 
   useEffect(() => {
+    setIsLoading(true)
     getAllArticles()
       .then((data) => {
         setArticles(data)
         setIsLoading(false)
       })
       .catch((err) => {
-        console.error(err);
-        setIsLoading(false);
+        setError("Failed to load articles.")
+        setIsLoading(false)
       })
-  }, [])
+  }, [location.key])
 
   if (isLoading) return <p>Loading articles...</p>
   if (!articles.length) return <p>No articles found</p>
