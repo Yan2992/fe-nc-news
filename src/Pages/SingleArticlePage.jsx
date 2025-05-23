@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import { getSingleArticle, getArticleComments, updateArticleVotes, postNewComment } from "../utils/api" 
+import { getSingleArticle, getArticleComments, updateArticleVotes, postNewComment, deleteComment } from "../utils/api" 
 import { useParams, Link } from "react-router-dom"
 import './SingleArticlesPage.css'
 
@@ -14,6 +14,7 @@ export default function SingleArticle() {
   const [newCommentBody, setNewCommentBody] = useState("")
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [feedbackMessage, setFeedbackMessage] = useState("")
+  const [isDeleting, setIsDeleting] = useState(false)
 
   useEffect(() => {
     setIsLoading(true)
@@ -85,6 +86,24 @@ export default function SingleArticle() {
       })
   }
 
+  const handleDeleteComment = (comment_id) => {
+  setIsDeleting(true)
+  deleteComment(comment_id)
+    .then(() => {
+      setComments((currentComments) =>
+        currentComments.filter((comment) => comment.comment_id !== comment_id)
+      )
+      setFeedbackMessage("Comment deleted successfully.")
+    })
+    .catch((err) => {
+      console.error(err)
+      setFeedbackMessage("Failed to delete comment.")
+    })
+    .finally(() => {
+      setIsDeleting(false)
+    })
+}
+
   if (isLoading || !article) return <p>Loading article...</p>
 
   return (
@@ -116,6 +135,7 @@ export default function SingleArticle() {
             <p><strong>{comment.author}</strong> said:</p>
             <p>{comment.body}</p>
             <p><em>{new Date(comment.created_at).toLocaleDateString()}</em></p>
+            {comment.author === newCommentAuthor && (<button onClick={() => handleDeleteComment(comment.comment_id)} disabled={isDeleting}>Delete</button>)}
           </div>
         ))}
 
@@ -132,4 +152,4 @@ export default function SingleArticle() {
       </section>
     </section>
   )
-};
+}
