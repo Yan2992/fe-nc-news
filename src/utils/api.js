@@ -33,5 +33,10 @@ export const updateArticleVotes = (article_id, voteChange) => {
 }
 
 export const postNewComment = (article_id, { author, body }) => {
-  return newsApi.post(`/articles/${article_id}/comments`, {username: author, body,}).then((res) => res.data.comment)
+  return newsApi.post(`/articles/${article_id}/comments`, {username: author, body})
+  .then((res) => res.data.comment)
 }
+
+export const deleteComment = (comment_id, username) => {
+  return newsApi.delete(`/comments/${comment_id}`, {data: { username }}
+)}
