@@ -1,4 +1,3 @@
-/* Main layout for the page */
 .topic-articles-page {
   min-height: 100vh;
   padding: 2rem 1rem 3rem;
@@ -11,7 +10,6 @@
   box-sizing: border-box;
 }
 
-/* Wrapper for content alignment */
 .topic-articles-wrapper {
   max-width: 1200px;
   width: 100%;
@@ -19,7 +17,6 @@
   box-sizing: border-box;
 }
 
-/* Page heading */
 .topic-articles-heading {
   font-size: 2rem;
   font-weight: bold;
@@ -29,7 +26,6 @@
   margin-bottom: 2rem;
 }
 
-/* Grid layout for article cards */
 .topic-articles-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -39,7 +35,6 @@
   box-sizing: border-box;
 }
 
-/* Article card styling */
 .article-card {
   background-color: #1e1e1e;
   border-radius: 8px;
@@ -56,13 +51,11 @@
   box-sizing: border-box;
 }
 
-/* Hover effect for article cards */
 .article-card:hover {
   box-shadow: 0 4px 12px rgba(255, 76, 76, 0.7);
   transform: translateY(-4px);
 }
 
-/* Article title */
 .article-card h3 {
   font-size: 1.1rem;
   margin-bottom: 0.6rem;
@@ -70,7 +63,6 @@
   font-weight: bold;
 }
 
-/* Title link */
 .article-card h3 a {
   color: #ff4c4c;
   font-weight: bold;
@@ -78,13 +70,11 @@
   transition: color 0.25s ease;
 }
 
-/* Title link on hover */
 .article-card h3 a:hover {
   color: #ff9999;
   text-decoration: underline;
 }
 
-/* Article metadata or excerpt */
 .article-card p {
   font-size: 0.85rem;
   color: #bbb;
@@ -92,7 +82,6 @@
   word-break: break-word;
 }
 
-/* Status messages (loading, empty, error) */
 .status-message {
   text-align: center;
   margin: 3rem 0;
@@ -104,7 +93,6 @@
   color: #ff4c4c;
 }
 
-/* Responsive layout for smaller screens */
 @media (max-width: 900px) {
   .topic-articles-grid {
     grid-template-columns: repeat(2, 1fr);

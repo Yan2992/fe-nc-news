@@ -5,8 +5,8 @@
     0 0 10px #cc0000;
   text-transform: capitalize;
   transition: text-shadow 0.3s ease;
-  font-size: 1.8rem; /* made bigger */
-  font-weight: 900; /* optional: bolden text */
+  font-size: 1.8rem;
+  font-weight: 900;
 }
 
 .topic-card h3:hover,
