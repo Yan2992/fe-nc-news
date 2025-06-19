@@ -5,7 +5,6 @@
   text-align: center;
 }
 
-
 body {
   margin: 0;
   min-height: 100vh;
@@ -17,7 +16,6 @@ body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-
 body::before {
   content: "";
   pointer-events: none;
@@ -27,7 +25,6 @@ body::before {
   opacity: 0.04;
   z-index: 0;
 }
-
 
 body::after {
   content: "";
@@ -56,7 +53,6 @@ body::after {
   z-index: 1;
 }
 
-
 @keyframes twinkle {
   0%, 100% { opacity: 0.7; }
   50% { opacity: 0.3; }
@@ -77,7 +73,6 @@ body::after {
   z-index: 2;
 }
 
-
 @keyframes float1 {
   0%, 100% { transform: translateY(0) translateX(0); }
   50% { transform: translateY(-30px) translateX(20px); }
@@ -88,7 +83,6 @@ body::after {
   50% { transform: translateY(25px) translateX(-15px); }
 }
 
-
 .home-page {
   position: relative;
   z-index: 10;
@@ -98,32 +92,32 @@ body::after {
   text-align: center;
 }
 
+.home-page h1,
+.home-page p,
+.home-page .intro-message {
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+  background: transparent !important;
+  color: #eee;
+}
 
 .home-page h1 {
   font-size: 3rem;
   margin-bottom: 1rem;
-  color: #eee;
   transition: text-shadow 0.3s ease;
-  border: none;
-  outline: none;
-  box-shadow: none;
 }
 
 .home-page h1:hover {
-  text-shadow: 0 0 10px rgba(86, 204, 242, 0.4); 
+  text-shadow: 0 0 10px rgba(86, 204, 242, 0.4);
   cursor: default;
 }
-
 
 .home-page p {
   font-size: 1.25rem;
   color: #bbb;
   margin-bottom: 2rem;
-  border: none;
-  outline: none;
-  box-shadow: none;
 }
-
 
 .home-page .intro-message {
   font-size: 1.1rem;
@@ -133,8 +127,4 @@ body::after {
   max-width: 600px;
   margin-left: auto;
   margin-right: auto;
-  border: none;
-  outline: none;
-  box-shadow: none;
 }
-

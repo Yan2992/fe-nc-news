@@ -1,0 +1,85 @@
+.comment-form {
+  background-color: #121212;
+  border: 2px solid #ff4c4c;
+  border-radius: 14px;
+  padding: 1.5rem 2rem;
+  max-width: 500px;
+  margin: 1rem auto;
+  color: #ff4c4c;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  box-shadow: 0 0 10px #ff4c4c88;
+  transition: box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.comment-form:hover {
+  box-shadow: 0 0 14px #ff9999cc;
+  border-color: #ff9999;
+}
+
+.comment-form h4 {
+  margin-bottom: 1rem;
+  color: #ff6666;
+  text-align: center;
+  font-weight: 600;
+}
+
+.comment-form input,
+.comment-form textarea {
+  width: 100%;
+  background-color: #1a1a1a;
+  border: 2px solid #ff4c4c;
+  border-radius: 10px;
+  color: #ff4c4c;
+  padding: 0.7rem 1rem;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  resize: vertical;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  font-family: inherit;
+}
+
+.comment-form input::placeholder,
+.comment-form textarea::placeholder {
+  color: #ff6666aa;
+}
+
+.comment-form input:focus,
+.comment-form textarea:focus {
+  outline: none;
+  border-color: #ff9999;
+  box-shadow: 0 0 8px #ff9999aa;
+  background-color: #222;
+}
+
+.comment-form button {
+  background-color: transparent;
+  border: 2px solid #ff4c4c;
+  border-radius: 20px;
+  color: #ff4c4c;
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  display: block;
+  margin: 0 auto;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  user-select: none;
+  min-width: 140px;
+}
+
+.comment-form button:hover:not(:disabled) {
+  background-color: #ff4c4c;
+  color: #121212;
+  border-color: #ff9999;
+}
+
+.comment-form button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.feedback-message {
+  margin-top: 1rem;
+  text-align: center;
+  color: #ff6666;
+  font-weight: 600;
+}

@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 import { getSingleArticle, getArticleComments, updateArticleVotes, postNewComment, deleteComment } from "../utils/api" 
 import { useParams, Link } from "react-router-dom"
-import './SingleArticlesPage.css'
+import "../Styles/SingleArticlePage.css"
 
 export default function SingleArticle() {
   const { article_id } = useParams()

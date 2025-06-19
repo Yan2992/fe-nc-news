@@ -1,0 +1,140 @@
+/* Main layout for the page */
+.topic-articles-page {
+  min-height: 100vh;
+  padding: 2rem 1rem 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #eee;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+
+/* Wrapper for content alignment */
+.topic-articles-wrapper {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+/* Page heading */
+.topic-articles-heading {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #ff4c4c;
+  text-align: center;
+  text-shadow: 0 0 6px #ff4c4c, 0 0 18px #cc0000;
+  margin-bottom: 2rem;
+}
+
+/* Grid layout for article cards */
+.topic-articles-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  width: 100%;
+  margin-bottom: 2rem;
+  box-sizing: border-box;
+}
+
+/* Article card styling */
+.article-card {
+  background-color: #1e1e1e;
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 2px 6px rgba(255, 76, 76, 0.3);
+  transition: box-shadow 0.3s ease, transform 0.2s ease;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: #eee;
+  word-wrap: break-word;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+/* Hover effect for article cards */
+.article-card:hover {
+  box-shadow: 0 4px 12px rgba(255, 76, 76, 0.7);
+  transform: translateY(-4px);
+}
+
+/* Article title */
+.article-card h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.6rem;
+  color: #ff4c4c;
+  font-weight: bold;
+}
+
+/* Title link */
+.article-card h3 a {
+  color: #ff4c4c;
+  font-weight: bold;
+  text-decoration: none;
+  transition: color 0.25s ease;
+}
+
+/* Title link on hover */
+.article-card h3 a:hover {
+  color: #ff9999;
+  text-decoration: underline;
+}
+
+/* Article metadata or excerpt */
+.article-card p {
+  font-size: 0.85rem;
+  color: #bbb;
+  margin: 0.3rem 0;
+  word-break: break-word;
+}
+
+/* Status messages (loading, empty, error) */
+.status-message {
+  text-align: center;
+  margin: 3rem 0;
+  font-size: 1.2rem;
+  color: #bbb;
+}
+
+.status-message.error {
+  color: #ff4c4c;
+}
+
+/* Responsive layout for smaller screens */
+@media (max-width: 900px) {
+  .topic-articles-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .topic-articles-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.back-button {
+  background-color: transparent;
+  border: 2px solid #ff4c4c;
+  color: #ff4c4c;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-bottom: 1.5rem;
+  transition: background-color 0.25s ease, color 0.25s ease;
+  align-self: flex-start;
+  user-select: none;
+}
+
+.back-button:hover,
+.back-button:focus {
+  background-color: #ff4c4c;
+  color: #121212;
+  outline: none;
+}

@@ -1,0 +1,220 @@
+.single-article {
+  max-width: 900px;
+  margin: 2rem auto 4rem;
+  padding: 1rem 2rem;
+  background-color: #121212;
+  color: #eee;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(255, 76, 76, 0.3);
+}
+
+.back-link {
+  display: inline-block;
+  margin-bottom: 1.5rem;
+  padding: 0.5rem 1.2rem;
+  border: 2px solid #ff4c4c;
+  border-radius: 20px;
+  color: #ff4c4c;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 
+    background-color 0.3s ease, 
+    color 0.3s ease,
+    box-shadow 0.3s ease;
+  user-select: none;
+}
+
+.back-link:hover,
+.back-link:focus {
+  background-color: #ff4c4c;
+  color: #121212;
+  box-shadow: 0 0 12px #ff4c4c;
+  outline: none;
+}
+
+h2 {
+  color: #ff4c4c;
+  margin-bottom: 0.5rem;
+}
+
+.single-article p {
+  line-height: 1.5;
+  margin: 0.6rem 0;
+  font-size: 1rem;
+  color: #ddd;
+}
+
+.article-stats {
+  margin: 1rem 0 1.5rem;
+  font-size: 0.95rem;
+  color: #ccc;
+}
+
+.vote-buttons {
+  margin-bottom: 1rem;
+}
+
+.vote-buttons button {
+  background-color: transparent;
+  border: 2px solid #ff4c4c;
+  color: #ff4c4c;
+  font-weight: 600;
+  padding: 0.4rem 1.1rem;
+  margin-right: 1rem;
+  border-radius: 20px;
+  cursor: pointer;
+  user-select: none;
+  transition: 
+    background-color 0.25s ease,
+    color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.vote-buttons button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+.vote-buttons button:not(:disabled):hover,
+.vote-buttons button:not(:disabled):focus {
+  background-color: #ff4c4c;
+  color: #121212;
+  box-shadow: 0 0 10px #ff4c4c;
+  outline: none;
+}
+
+.vote-info {
+  font-style: italic;
+  color: #bbb;
+  margin-bottom: 1rem;
+}
+
+.error-message {
+  color: #ff4c4c;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.comments-section {
+  margin-top: 2rem;
+  border-top: 1px solid #333;
+  padding-top: 1.5rem;
+  color: #eee;
+}
+
+.comments-section h3 {
+  margin-bottom: 1rem;
+  color: #ff4c4c;
+}
+
+.comments-section p {
+  margin: 0.3rem 0;
+}
+
+.comments-section > div {
+  background-color: #1e1e1e;
+  padding: 0.9rem 1rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  box-shadow: 0 0 5px rgba(255, 76, 76, 0.2);
+}
+
+.comments-section strong {
+  color: #ff6a6a;
+}
+
+.comments-section em {
+  font-size: 0.85rem;
+  color: #bbb;
+}
+
+.comments-section button {
+  background-color: transparent;
+  border: 1.5px solid #ff4c4c;
+  color: #ff4c4c;
+  border-radius: 15px;
+  padding: 4px 12px;
+  font-size: 0.85rem;
+  cursor: pointer;
+  user-select: none;
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+.comments-section button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.comments-section button:hover:not(:disabled),
+.comments-section button:focus:not(:disabled) {
+  background-color: #ff4c4c;
+  color: #121212;
+  outline: none;
+  box-shadow: 0 0 8px #ff4c4c;
+}
+
+.comment-form {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.comment-form label {
+  font-weight: 600;
+  color: #ff4c4c;
+}
+
+.comment-form input,
+.comment-form textarea {
+  background-color: #222;
+  color: #eee;
+  border: 1.5px solid #444;
+  border-radius: 6px;
+  padding: 0.5rem 0.8rem;
+  font-size: 1rem;
+  resize: vertical;
+  transition: border-color 0.3s ease;
+}
+
+.comment-form input:focus,
+.comment-form textarea:focus {
+  border-color: #ff4c4c;
+  outline: none;
+  box-shadow: 0 0 6px #ff4c4c;
+}
+
+.comment-form button {
+  width: max-content;
+  background-color: transparent;
+  border: 2px solid #ff4c4c;
+  color: #ff4c4c;
+  font-weight: 600;
+  padding: 0.5rem 1.4rem;
+  border-radius: 20px;
+  cursor: pointer;
+  user-select: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.comment-form button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.comment-form button:hover:not(:disabled),
+.comment-form button:focus:not(:disabled) {
+  background-color: #ff4c4c;
+  color: #121212;
+  outline: none;
+  box-shadow: 0 0 10px #ff4c4c;
+}
+
+.feedback-message {
+  margin-top: 1rem;
+  font-weight: 600;
+  color: #ff6a6a;
+  user-select: none;
+}

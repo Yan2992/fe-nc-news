@@ -40,3 +40,13 @@ export const postNewComment = (article_id, { author, body }) => {
 export const deleteComment = (comment_id, username) => {
   return newsApi.delete(`/comments/${comment_id}`, {data: { username }}
 )}
+
+export const getTopics = () => {
+  return newsApi.get("/topics")
+    .then(res => res.data.topics);
+}
+
+export const getArticlesByTopic = (topic) => {
+  return newsApi.get(`/articles?topic=${topic}`)
+    .then(res => res.data.articles);
+}
